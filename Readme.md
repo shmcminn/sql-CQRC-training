@@ -141,7 +141,9 @@ WHERE cand_nm LIKE '%Trump%'
 ORDER BY disb_amt desc
 ```
 
-Notice how instead of just saying `cand_nm IS "Trump, Donald J."`, we used `LIKE` instead. This gives us the flexibility to ask for any rows that contain Trump. The percent signs here act as an "anything" symbol, so we asked for rows `WHERE` the cand_nm value starts with anything, then has "Trump", then has anything after that.
+Notice how instead of just saying `cand_nm IS 'Trump, Donald J.'`, we used `LIKE` instead. This gives us the flexibility to ask for any rows that contain Trump. The percent signs here act as an "anything" symbol, so we asked for rows `WHERE` the cand_nm value starts with anything, then has 'Trump', then has anything after that.
+
+And why did we put quotes around Trump's name? Technically, because its a string — which is one of the types of variables used in computer programming. An easier way to remember this is if you're typing something SQLite won't recognize — a name, date, place, etc — you need to wrap it in quotes to tel SQLite you want *exactly* that. Words that SQLite recognizes like `SELECT`, `FROM` and `IS`, as well as numbers, don't need quotes.
 
 We also included the `recipient_nm` category here, to see who was getting these large payments. The `disb_desc` column, again, tells us what they were for.
 
