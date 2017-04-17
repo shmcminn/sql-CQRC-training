@@ -115,6 +115,8 @@ So go ahead and hit Run SQL and you should get something lke this.
 
 Now we can see who spent the most, and by how much. Look how Trump just barely made the top five!
 
+<img src="http://media.cq.com/images/giphy-downsized-trumptu.gif" alt="" />
+
 Using the same functions, we can also see what the candidates spent the most on.
 
 ```
