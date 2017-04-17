@@ -184,5 +184,6 @@ Notice how we asked SQLite to use two `WHERE` statements? All it takes was an `A
 
 [Guide to doing common Excel tasks in SQL, also by Webster](https://docs.google.com/document/d/1spB5gs82X1oVmCweuFWHtlZ-hA3xSlYhvIbL7dmAx88/edit)
 
-[A similar, more detailed intro to SQL by Troy Thibodeaux at AP](https://github.com/tthibo/SQL-Tutorial)
+[A similar, more detailed intro to SQL, by Troy Thibodeaux at AP](https://github.com/tthibo/SQL-Tutorial)
 
+[Not for SQL, but a good primer on the mindset of "interviewing" data, by David Eads of NPR](http://training.npr.org/visual/what-to-do-with-a-big-pile-of-data/)
