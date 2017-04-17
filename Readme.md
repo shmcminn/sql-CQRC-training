@@ -77,7 +77,7 @@ SELECT * FROM potus_expenditures_2016
 LIMIT 100
 ```
 
-(Since this is such a big file and we don't want to kill your computer right now, add that LIMIT 100 at the bottom of your query. This just shows us the first 100 rows.)
+(Since this is such a big file and we don't want to kill your computer right now, add that `LIMIT 100` at the bottom of your query. This just shows us the first 100 rows.)
 
 This is the most basic form for a SQL query: Select something from a table. In this case, we're selecting everything using the wildcard symbold (*), which means we will get a display of everything in the table.
 
@@ -97,15 +97,15 @@ ORDER BY sum(disb_amt) desc
 
 Let's break that down:
 
-First, we SELECT the column containing the candidate names, and make a new column with the sum of all disbursement amounts. Remember we need to specify we're selecting FROM potus_expenditures_2016
+First, we `SELECT` the column containing the candidate names, and make a new column with the sum of all disbursement amounts. Remember we need to specify we're selecting `FROM potus_expenditures_2016`
 
 ```SELECT cand_nm, sum(disb_amt) FROM potus_expenditures_2016```
 
-Then, we want to GROUP the data by candidate names
+Then, we want to `GROUP` the data `BY` candidate names
 
 ```GROUP BY cand_nm```
 
-Last, just to make reading it easier, we ORDER the data by those sums, descedning 
+Last, just to make reading it easier, we `ORDER` the data `BY` those sums, descedning 
 
 ```ORDER BY sum(disb_amt) desc```
 
@@ -131,7 +131,7 @@ But look at the top two entries for Cruz - Postage/List Rental and Media/List re
 
 Let's switch gears and look at just Trump's spending, since we know he ended up winning.
 
-We're going to add a new function here: WHERE. This does exactly what it sounds like: it gives us only rows where a condition is true.
+We're going to add a new function here: `WHERE`. This does exactly what it sounds like: it gives us only rows where a condition is true.
 
 ```
 SELECT cand_nm, recipient_nm, disb_desc, disb_amt FROM potus_expenditures_2016
@@ -139,9 +139,9 @@ WHERE cand_nm LIKE '%Trump%'
 ORDER BY disb_amt desc
 ```
 
-Notice how instead of just saying cand_nm IS "Trump, Donald J.", we used LIKE instead. This gives us the flexibility to ask for any rows that contain Trump. The percent signs here act as an "anything" symbol, so we asked for rows WHERE the cand_nm value starts with anything, then has "Trump", then has anything after that.
+Notice how instead of just saying `cand_nm IS "Trump, Donald J."`, we used `LIKE` instead. This gives us the flexibility to ask for any rows that contain Trump. The percent signs here act as an "anything" symbol, so we asked for rows `WHERE` the cand_nm value starts with anything, then has "Trump", then has anything after that.
 
-We also included the recipient_nm category here, to see who was getting these large payments. The disb_desc column, again, tells us what they were for.
+We also included the `recipient_nm` category here, to see who was getting these large payments. The `disb_desc` column, again, tells us what they were for.
 
 <img src="http://media.cq.com/images/screenshot2017-04-17at2.36.29pm.png" alt="" />
 
