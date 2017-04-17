@@ -81,7 +81,7 @@ LIMIT 100
 
 This is the most basic form for a SQL query: Select something from a table. In this case, we're selecting everything using the wildcard symbold (*), which means we will get a display of everything in the table.
 
-The first thing I notice here is each row has the name of a candidate (cand_nm), and how much they spent on a single expenditure (disb_amt).
+The first thing I notice here is each row has the name of a candidate `cand_nm`, and how much they spent on a single expenditure `disb_amt`.
 
 One question I have from this data, which goes from 2014 though the first quarter of 2016, is who spent the most money out of the presidential candidates in this time frame?
 
@@ -154,7 +154,7 @@ GROUP BY recipient_nm
 ORDER BY sum(disb_amt) desc
 ```
 
-Notice how we drop the disb_desc column here, since two expenditures could go to the same vendor for payments with different descriptions. If we included it, it would just arbitrarily choose one of the descriptions, which may or may not be true for all payments to that vendor.
+See how we drop the `disb_desc` column here, since two expenditures could go to the same vendor for payments with different descriptions. If we included it, it would just arbitrarily choose one of the descriptions, which may or may not be true for all payments to that vendor.
 
 <img src="http://media.cq.com/images/screenshot2017-04-17at2.41.06pm.png" alt="" />
 
@@ -166,7 +166,7 @@ WHERE cand_nm LIKE '%Trump%' AND recipient_nm LIKE '%RICK REED%'
 ORDER BY disb_amt desc
 ```
 
-Notice how we asked SQLite to use two WHERE statements? All it takes was an AND, and it now only pulls records where the candidate is Trump AND the recipient is "something something Rick Reed something something" (because of the percent signs).
+Notice how we asked SQLite to use two `WHERE` statements? All it takes was an `AND`, and it now only pulls records where the candidate is Trump AND the recipient is "something something Rick Reed something something" (because of the percent signs).
 
 <img src="http://media.cq.com/images/screenshot2017-04-17at2.45.00pm.png" alt="" />
 
