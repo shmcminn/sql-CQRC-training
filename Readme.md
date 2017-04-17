@@ -13,6 +13,11 @@ The reason why SQL is so powerful for journalism is it lets us ask very specific
 
 There's lots of fancy software you can get to run SQL and store databases in, but if you have Mozilla Firefox on your computer you actually already have a *relational database manager* ready to go.
 
+### What SQL's good for
+Small data sets are easy to analyze by hand - you can take the average of a few years of Defense Department spending by adding them together then dividing, for example, or do a percent change by subtracting the old value from the new value and dividing that by the old value. 
+
+But what happens when you have LOTS of data? You can't even begin to start averaging or counting things by hand in spending or contribution reports. You need a computer to do the heavy lifting for you. Other times you need something more powerful: inspection records, FOIA responses, historical databases and other databases that have **lots of line-by-line entries** you want to ask questions of.
+
 ### To install SQLite in Firefox
 ##### Step 1
 Go [here](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/) **in Firefox** and click Add to Firefox
