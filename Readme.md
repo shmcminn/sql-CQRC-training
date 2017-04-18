@@ -129,9 +129,9 @@ Now we can see who spent the most, and by how much. Look how Trump just barely m
 Using the same functions, we can also see what the candidates spent the most on.
 
 ```
-SELECT disb_desc, cand_nm, disb_amt FROM potus_expenditures_2016
+SELECT disb_desc, cand_nm, sum(disb_amt) FROM potus_expenditures_2016
 GROUP BY disb_desc, cand_nm
-ORDER BY disb_amt desc
+ORDER BY sum(disb_amt) desc
 ```
 
 <img src="http://media.cq.com/images/screenshot2017-04-17at2.24.06pm.png" alt="" />
