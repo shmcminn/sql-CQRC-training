@@ -134,7 +134,7 @@ GROUP BY disb_desc, cand_nm
 ORDER BY sum(disb_amt) desc
 ```
 
-<img src="http://media.cq.com/images/screenshot2017-04-17at2.24.06pm.png" alt="" />
+<img src="http://media.cq.com/images/screenshot2017-04-21at4.00.08pm.png" alt="" />
 
 At this point it looks like the highest category for anyone had been Clinton's spending on online ad buys. 
 
